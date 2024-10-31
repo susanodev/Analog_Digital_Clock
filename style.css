@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background: rgb(128, 33, 152);
+    background: radial-gradient(circle, rgba(128, 33, 152, 1) 30%, rgba(26, 109, 196, 1) 72%, rgba(0, 212, 255, 1) 100%);
+   position: relative;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 72px;
+  background: -webkit-linear-gradient(#ea0c826b, #000000);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*Audio*/
+audio{
+   display:none;
+  }
+
+/*Digital Clock Section*/
+
+.full-date {
+    font-size: 40px;
+    color: antiquewhite;
+}
+
+.digital-clock {
+    font-size: 500%;
+    color: rgb(229, 229, 22);
+    border: 1px solid #f5f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0 5px 0 5px; */
+}
+
+/* Layout */
+.main {
+    display: flex;
+    padding: 2em;
+    height: 90vh;
+    justify-content: center;
+    align-items: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clockbox,
+#clock {
+    width: 100%;
+}
+
+/* Clock styles */
+.circle {
+    fill: none;
+    stroke: rgb(114, 10, 10);
+    stroke-width: 15;
+    stroke-miterlimit: 10;
+}
+
+.mid-circle {
+    fill: #000;
+}
+
+.hour-marks {
+    fill: none;
+    stroke: #000;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.hour-arm {
+    fill: none;
+    stroke: #000;
+    stroke-width: 17;
+    stroke-miterlimit: 10;
+}
+
+.minute-arm {
+    fill: none;
+    stroke: #000;
+    stroke-width: 11;
+    stroke-miterlimit: 10;
+}
+
+.second-arm {
+    fill: none;
+    stroke: aquamarine;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+}
+
+/* Transparent box ensuring arms center properly. */
+.sizing-box {
+    fill: none;
+}
+
+/* Make all arms rotate around the same center point. */
+/* Optional: Use transition for animation. */
+#hour,
+#minute,
+#second {
+    transform-origin: 300px 300px;
+    transition: transform 0.5s ease-in-out;
+}
